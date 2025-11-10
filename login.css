@@ -1,4 +1,4 @@
- * {
+* {
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
     }
@@ -9,12 +9,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-image: url(geek.jpeg);
+      background-image: url(imagem.jpeg);
       background-size: cover;
     }
 
     .container {
-      background: rgba(0, 0, 0, 0.801);
+      background: rgba(255, 253, 253, 0.801);
       width: 380px;
       padding: 2rem;
       border-radius: 15px;
@@ -23,9 +23,10 @@
       transition: all 0.5s ease;
     }
 
+    
     .bemvindo {
       font-size: 30px;
-      color: #6a0dad;
+      color: #ffffff;
       margin-bottom: 1rem;
     }
 
