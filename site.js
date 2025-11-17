@@ -5,7 +5,13 @@
       { id:3, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/7c3aed/fff?text=Bon%C3%A9" },
       { id:4, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/5b21b6/fff?text=Jaqueta" },
       { id:5, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/9f7aea/fff?text=Meias" },
-      { id:6, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/8b5cf6/fff?text=Pixel" }
+      { id:6, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/8b5cf6/fff?text=Pixel" },    
+      { id:7, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/9333ea/fff?text=T%C3%AAnis" },
+      { id:8, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/6d28d9/fff?text=Matrix" },
+      { id:9, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/7c3aed/fff?text=Mochila" },
+      { id:10, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/5b21b6/fff?text=Pulseira" }, 
+      { id:11, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/5b21b6/fff?text=Pulseira" },
+      { id:12, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/9f7aea/fff?text=Fone" } 
     ];
 
     // Elementos
