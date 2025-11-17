@@ -1,1 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Loja Geek</title>
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="logo">LG</div>
+      <div>
+        <h1>Loja Geek</h1>
+        <div class="muted" style="font-size:13px">Roupas e acessórios geeks</div>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <div id="welcome" class="muted" style="font-size:13px;margin-right:10px"></div>
+      <button id="loginBtn" class="btn btn-ghost">Login</button>
+      <button id="cartBtn" class="btn btn-ghost">Carrinho <span id="cartCount" class="cart-badge">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <div class="intro">
+      <div>
+        <h2>Novidades</h2>
+        <p class="muted">Escolha seu look geek favorito.</p>
+      </div>
+      <div class="muted small">Tema roxo • Versão estática</div>
+    </div>
+
+    <section class="grid" id="products"></section>
+  </main>
+
+  <!-- Drawer / Carrinho -->
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <aside id="drawer" class="drawer" aria-hidden="true">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+      <div style="font-weight:800;font-size:18px;color:var(--purple-700)">Seu Carrinho</div>
+      <button id="closeDrawer" class="btn">Fechar</button>
+    </div>
+    <div id="cartList"></div>
+
+    <div style="margin-top:14px;border-top:1px solid rgba(0,0,0,0.04);padding-top:12px">
+      <div style="display:flex;justify-content:space-between;align-items:center;font-weight:700">
+        <div>Total</div>
+        <div id="cartTotal">R$ 0.00</div>
+      </div>
+      <button id="checkoutBtn" class="btn" style="margin-top:12px;width:100%;background:linear-gradient(90deg,var(--purple-600),var(--purple-500));color:white;border-radius:8px">Finalizar Compra</button>
+    </div>
+  </aside>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <h3 style="margin:0 0 8px 0;color:var(--purple-700)">Entrar</h3>
+      <form id="loginForm">
+        <label for="email">Email</label>
+        <input id="email" type="email" required placeholder="seu@exemplo.com" />
+        <label for="password">Senha</label>
+        <input id="password" type="password" required placeholder="••••••" />
+        <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:8px">
+          <button type="button" id="modalCancel" class="btn">Cancelar</button>
+          <button type="submit" class="btn" style="background:linear-gradient(90deg,var(--purple-600),var(--purple-500));color:white">Entrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>© <span id="year"></span> Loja Geek — Todos os direitos reservados</footer>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
 
