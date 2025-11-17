@@ -1,17 +1,13 @@
 // Produtos (estáticos)
     const PRODUCTS = [
-      { id:1, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/8b5cf6/fff?text=Camiseta" },
-      { id:2, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/6d28d9/fff?text=Moletom" },
-      { id:3, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/7c3aed/fff?text=Bon%C3%A9" },
-      { id:4, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/5b21b6/fff?text=Jaqueta" },
-      { id:5, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/9f7aea/fff?text=Meias" },
-      { id:6, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/8b5cf6/fff?text=Pixel" },    
-      { id:7, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/9333ea/fff?text=T%C3%AAnis" },
-      { id:8, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/6d28d9/fff?text=Matrix" },
-      { id:9, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/7c3aed/fff?text=Mochila" },
-      { id:10, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/5b21b6/fff?text=Pulseira" }, 
-      { id:11, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/5b21b6/fff?text=Pulseira" },
-      { id:12, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/9f7aea/fff?text=Fone" } 
+      { id:1, name:"Camiseta Cyber Geek", price:79.90, img:"https://acdn-us.mitiendanube.com/stores/003/290/789/products/4e672fad5bede9b5fe5f1df2148452b0-2248d24b74f85a661517201263370769-1024-1024.jpg" },
+      { id:2, name:"Moletom Roxo Galáxia", price:149.90, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReqhl8bOzoBHn6uckCvtW51NAfZieBFpWWMw&s" },
+      { id:3, name:"Boné DC", price:59.90, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa53JL4rPSFcvSxtBb3P4s6S917feq031XQg&s" },
+      { id:4, name:"Moletom Marvel", price:249.90, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLSnA612tLBsZ9SK05V3JA6J8TIU0uubhj-Q&s" },
+      { id:5, name:"Meia Sonic (Par)", price:29.90, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoSq1qg3sEuYHDq22AkMtIYRg4_ZtET1-2-A&s" },
+      { id:6, name:"Camiseta Homem Aranha", price:89.90, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw-7COBKv6YpmtefANVLQLBOdLMkfl1Vvn-w&s" },
+      { id:7, name:"Pop Funko Capitão America", price:89.90, img:"https://cdn.awsli.com.br/2500x2500/53/53761/produto/50015272/f038d6dc7b.jpg" },
+       { id:7, name:"Xícara Marvel", price:49.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI3fnvMHAMJ2ljNJzw2lqkTojiqfngCOro5g&s" },
     ];
 
     // Elementos
@@ -196,3 +192,5 @@
       window.removeFromCart = removeFromCart;
     }
     init();
+
+
