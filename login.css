@@ -1,88 +1,76 @@
 * {
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-image: url(imagem.jpeg);
-      background-size: cover;
-    }
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(imagem.jpeg);
+  background-size: cover;
+}
 
-    .container {
-      background: rgba(255, 253, 253, 0.801);
-      width: 380px;
-      padding: 2rem;
-      border-radius: 15px;
-      
-      text-align: center;
-      transition: all 0.5s ease;
-    }
+.container {
+  background: rgba(255, 253, 253, 0.9);
+  width: 380px;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.5s ease;
+}
 
-    
-    .bemvindo {
-      font-size: 30px;
-      color: #ffffff;
-      margin-bottom: 1rem;
-    }
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: 0.3s;
+}
 
-    input {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      border: 2px solid #ddd;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
+input:focus {
+  border-color: #6a0dad;
+  outline: none;
+}
 
-    input:focus {
-      border-color: #6a0dad;
-      outline: none;
-    }
+button {
+  width: 100%;
+  padding: 10px;
+  background: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
 
-    button {
-      width: 100%;
-      padding: 10px;
-      background: #6a0dad;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-      margin-top: 10px;
-      transition: 0.3s;
-    }
+button:hover {
+  background: #8e44ad;
+}
 
+.link {
+  margin-top: 15px;
+  display: block;
+  color: #6a0dad;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+}
 
-    button:hover {
-      background: #8e44ad;
-    }
+.hidden {
+  display: none;
+}
 
-    .link {
-      margin-top: 15px;
-      display: block;
-      color: #6a0dad;
-      cursor: pointer;
-      text-decoration: underline;
-      font-size: 14px;
-    }
+.fade {
+  animation: fadeIn 0.5s ease forwards;
+}
 
-    .hidden {
-      display: none;
-    }
-
-    /* Animação suave entre telas */
-    .fade {
-      animation: fadeIn 0.5s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
-
-
-    }
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
