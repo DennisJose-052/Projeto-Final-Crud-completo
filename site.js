@@ -1,11 +1,11 @@
 // Produtos (estáticos)
     const PRODUCTS = [
-      { id:1, name:"Camiseta Cyber Geek", price:79.90, img:"https://via.placeholder.com/600x400/8b5cf6/fff?text=Camiseta" },
-      { id:2, name:"Moletom Roxo Galáxia", price:149.90, img:"https://via.placeholder.com/600x400/6d28d9/fff?text=Moletom" },
-      { id:3, name:"Boné Retro", price:59.90, img:"https://via.placeholder.com/600x400/7c3aed/fff?text=Bon%C3%A9" },
-      { id:4, name:"Jaqueta Tech", price:249.90, img:"https://via.placeholder.com/600x400/5b21b6/fff?text=Jaqueta" },
-      { id:5, name:"Meia Gamer (Par)", price:29.90, img:"https://via.placeholder.com/600x400/9f7aea/fff?text=Meias" },
-      { id:6, name:"Camiseta Pixel", price:89.90, img:"https://via.placeholder.com/600x400/8b5cf6/fff?text=Pixel" }
+      { id:1, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/8b5cf6/fff?text=Camiseta" },
+      { id:2, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/6d28d9/fff?text=Moletom" },
+      { id:3, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/7c3aed/fff?text=Bon%C3%A9" },
+      { id:4, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/5b21b6/fff?text=Jaqueta" },
+      { id:5, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/9f7aea/fff?text=Meias" },
+      { id:6, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/8b5cf6/fff?text=Pixel" }
     ];
 
     // Elementos
