@@ -1,1 +1,174 @@
 
+:root{
+  --purple-900:#2a0250;
+  --purple-700:#6b21a8;
+  --purple-600:#7c3aed;
+  --purple-500:#9f7aea;
+  --bg:#3b0a63;
+  --card:#ffffff;
+  --muted:#d0c6e8;
+  --glass: rgba(255,255,255,0.15);
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #3b0a63, #4c1480, #5b21b6);
+  color:#f5f3ff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+/* Header */
+header{
+  background: linear-gradient(90deg,var(--purple-600), var(--purple-500));
+  color:white;
+  padding:14px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  box-shadow: 0 6px 18px rgba(124,58,237,0.25);
+}
+.brand{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.logo{
+  width:44px;
+  height:44px;
+  background:linear-gradient(180deg,var(--purple-700),var(--purple-500));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:8px;
+  font-weight:800;
+  color:white;
+  font-size:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.18);
+}
+.brand h1{margin:0;font-size:18px;letter-spacing:0.2px}
+.header-actions{display:flex;gap:10px;align-items:center}
+
+button.btn {
+  border:0;
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+.btn-ghost{background:rgba(255,255,255,0.08); color:white}
+.cart-badge{
+  display:inline-grid;
+  place-items:center;
+  min-width:22px;
+  height:22px;
+  padding:0 6px;
+  background:white;
+  color:var(--purple-700);
+  border-radius:12px;
+  font-weight:700;
+  margin-left:8px;
+  font-size:12px;
+}
+
+/* Main */
+main{max-width:1100px;margin:28px auto;padding:0 18px;flex:1}
+.intro{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+.intro h2{color:var(--purple-500);margin:0}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(1,1fr);
+  gap:18px;
+}
+@media(min-width:640px){ .grid{grid-template-columns:repeat(2,1fr)} }
+@media(min-width:980px){ .grid{grid-template-columns:repeat(4,1fr)} }
+
+/* ----- NOVO: FUNDO ROXO NOS CARDS + HOVER ----- */
+
+.card{
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+  border-radius:14px;
+  padding:14px;
+  box-shadow:0 8px 20px rgba(16,24,40,0.18);
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  min-height:320px;
+
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.card:hover{
+  transform: translateY(-6px) scale(1.02);
+  box-shadow:0 14px 26px rgba(124,58,237,0.45);
+  background: rgba(255,255,255,0.16);
+}
+
+/* Efeito na imagem do produto */
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:10px;
+  transition: transform .25s ease, filter .25s ease;
+}
+
+.card:hover img{
+  transform: scale(1.06);
+  filter: brightness(1.08);
+}
+
+.price{color:#f1e6ff;font-weight:800;font-size:18px}
+.card .meta{font-size:13px;color:var(--muted)}
+
+.card-footer{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:8px}
+
+/* Cart drawer */
+.drawer-backdrop{
+  position:fixed;inset:0;background:rgba(0,0,0,0.35);display:none;
+}
+.drawer{
+  position:fixed;right:0;top:0;height:100vh;width:380px;
+  background:linear-gradient(180deg,#fff,#fbfaff);
+  box-shadow:-20px 0 40px rgba(16,24,40,0.12);
+  transform:translateX(110%);
+  transition:transform .28s ease;
+  padding:18px;
+  overflow:auto;
+  z-index:60;
+  border-left:1px solid rgba(0,0,0,0.03);
+}
+.drawer.open{transform:translateX(0)}
+.drawer-backdrop.show{display:block}
+
+.cart-item{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px dashed rgba(0,0,0,0.04)}
+.cart-item img{width:64px;height:64px;object-fit:cover;border-radius:8px}
+.qty-controls{display:flex;align-items:center;gap:8px}
+.small{font-size:13px;color:var(--muted)}
+
+/* Login modal */
+.modal{
+  position:fixed;inset:0;display:grid;place-items:center;background:rgba(0,0,0,0.4);z-index:80;visibility:hidden;opacity:0;transition:opacity .18s ease, visibility .18s ease;
+}
+.modal.show{visibility:visible;opacity:1}
+.modal-card{
+  width:100%;max-width:420px;background:white;padding:18px;border-radius:12px;box-shadow:0 12px 40px rgba(2,6,23,0.2);
+}
+label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+input[type="email"], input[type="password"]{
+  width:100%;padding:10px;border-radius:8px;border:1px solid #e6e6ea;font-size:14px;margin-bottom:10px;
+}
+
+footer{padding:20px;text-align:center;color:var(--muted);font-size:13px}
+
+/* small helpers */
+.muted{color:var(--muted)}
+.center{display:flex;align-items:center;justify-content:center}
