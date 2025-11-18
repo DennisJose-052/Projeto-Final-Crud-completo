@@ -1,17 +1,17 @@
 // Produtos (estáticos)
 const PRODUCTS = [
-  { id:1, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/8b5cf6/fff?text=Camiseta" },
-  { id:2, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/6d28d9/fff?text=Moletom" },
-  { id:3, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/7c3aed/fff?text=Bon%C3%A9" },
-  { id:4, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/5b21b6/fff?text=Jaqueta" },
-  { id:5, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/9f7aea/fff?text=Meias" },
-  { id:6, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/8b5cf6/fff?text=Pixel" },    
-  { id:7, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/9333ea/fff?text=T%C3%AAnis" },
-  { id:8, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/6d28d9/fff?text=Matrix" },
-  { id:9, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/7c3aed/fff?text=Mochila" },
-  { id:10, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/5b21b6/fff?text=Pulseira" }, 
-  { id:11, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/5b21b6/fff?text=Pulseira" },
-  { id:12, name:"nome", price:0.00, img:"https://via.placeholder.com/600x400/9f7aea/fff?text=Fone" } 
+  { id:1, name:"Xícara Marvel", price:49.99, img:"https://www.toquedecorativo.com.br/wp-content/uploads/2022/04/babcb74b70.jpg" },
+  { id:2, name:"Camisa Homem Aranha", price:69.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKkVOOSc13j2rTgORv6BulX6yVUElMKsiJaw&s" },
+  { id:3, name:"Moletom Marvel", price:249.49, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqNVl6UxIWruxTP277LAS4OaCpB8kvbePbUw&s" },
+  { id:4, name:"Boné Vingadores", price:79.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5Ia11AHxHF1nvlzXjaPhcYl0C8ZlOxUv9hw&s" },
+  { id:5, name:"Jaqueta Goku", price:149.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuLzTLKV8ETxd9z0YUcIm0uKE3rnb3Ix7UDQ&s" },
+  { id:6, name:"Meia Sonic (PAR)", price:69.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtrNEhpKBSABMLVrwhBq2uchKoPANeaomTcQ&s" },    
+  { id:7, name:"Mochila Vingadores", price:179.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDg-ilmbLCMBTawBc3p2Wb0IUDO56GAYsMUw&s" },
+  { id:8, name:"Blusa Matrix", price:69.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOzw6C01wsQHdHvxJlR948_EP-bOn9fwrtRg&s" },
+  { id:9, name:"Pop Funko Doutor estranho", price:109.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfBH1XvhoDbMfdxJVlxmfsHp1gfr13ATrFmA&s" },
+  { id:10, name:"Pop Funko Capitão America", price:109.99, img:"https://cdn.awsli.com.br/600x700/84/84034/produto/230462615/funko-pop--marvel-wwii-ultimates-captain-america-821-exclusivo-c-1--800-cv8eq0wscv.jpg" }, 
+  { id:11, name:"Pop Funko Homem de Ferro", price:109.99, img:"https://m.media-amazon.com/images/I/81CnvOG8+YL.jpg" },
+  { id:12, name:"Pop Funko Thanos", price:109.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4bo4VPvkjfuvbNMteMADnXgoytoT7qWqP2VMuEP4Mkf6vsun8MK-WV6wW89JYQEglMAc&usqp=CAU" } 
 ];
 
 // Elementos
