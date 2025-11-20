@@ -47,6 +47,9 @@
       const email = document.getElementById('loginEmail').value;
       const senha = document.getElementById('loginPassword').value;
       alert(`Login:\nEmail: ${email}\nSenha: ${senha}`);
+      
+      //redireciona para outra página
+      window.location.href = "site.html";
     }
 
     function cadastrar() {
@@ -61,6 +64,8 @@
       alert("Redirecionando para recuperação de senha...");
       // Aqui você pode colocar window.location.href = "sua_pagina.html";
     }
+    
   </script>
+ 
 </body>
 </html>
