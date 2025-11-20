@@ -3,13 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sobre - NerdNexus</title>
+  <title>NerdNexus</title>
+  <!-- CSS está na pasta css -->
   <link rel="stylesheet" href="site.css" />
 </head>
 <body>
 
-  <!-- Header (pode copiar o mesmo do index.html) -->
+  <!-- HEADER -->
   <header class="header">
+    <!-- ESQUERDA: LOGO + NOME -->
     <div class="brand">
       <div class="logo">
         <img src="logo.jpg" alt="Logo NerdNexus">
@@ -19,14 +21,30 @@
         <div class="muted" style="font-size:13px;">Roupas e acessórios geeks</div>
       </div>
     </div>
+
+    <!-- CENTRO: MENU -->
     <nav class="nav">
       <ul class="menu">
         <li><a href="site.html">HOME</a></li>
         <li><a href="sobre.html">SOBRE</a></li>
-        <li><a href="#">SERVIÇOS</a></li>
+
+        <!-- Dropdown CATEGORIAS -->
+        <li class="dropdown">
+          <a href="#">CATEGORIAS</a>
+          <div class="dropdown-content">
+            <button class="category-btn" data-category="all">Todos</button>
+            <button class="category-btn" data-category="camisetas">Camisetas</button>
+            <button class="category-btn" data-category="canecas">Canecas</button>
+            <button class="category-btn" data-category="pop-funko">Pop Funko</button>
+            <button class="category-btn" data-category="moletons">Moletons</button>
+          </div>
+        </li>
+
         <li><a href="#">CLIENTE</a></li>
       </ul>
     </nav>
+
+    <!-- DIREITA: LOGIN + CARRINHO -->
     <div class="header-actions">
       <a href="login.html" class="btn btn-ghost">Login</a>
       <button id="cartBtn" class="btn btn-ghost">
