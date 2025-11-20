@@ -8,12 +8,31 @@ const PRODUCTS = [
   { id:6, name:"Meia Sonic (PAR)", price:69.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtrNEhpKBSABMLVrwhBq2uchKoPANeaomTcQ&s", category:"acessorios" },    
   { id:7, name:"Mochila Vingadores", price:179.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDg-ilmbLCMBTawBc3p2Wb0IUDO56GAYsMUw&s", category:"acessorios" },
   { id:8, name:"Camisa Matrix", price:69.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOzw6C01wsQHdHvxJlR948_EP-bOn9fwrtRg&s", category:"camisetas" },
-  { id:9, name:"Pop Funko Doutor estranho", price:109.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfBH1XvhoDbMfdxJVlxmfsHp1gfr13ATrFmA&s", category:"pop-funko" },
-  { id:10, name:"Pop Funko Capitão America", price:109.99, img:"https://cdn.awsli.com.br/600x700/84/84034/produto/230462615/funko-pop--marvel-wwii-ultimates-captain-america-821-exclusivo-c-1--800-cv8eq0wscv.jpg", category:"pop-funko" },
-  { id:11, name:"Pop Funko Homem de Ferro", price:109.99, img:"https://m.media-amazon.com/images/I/81CnvOG8+YL.jpg", category:"pop-funko" },
-  { id:12, name:"Pop Funko Thanos", price:109.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4bo4VPvkjfuvbNMteMADnXgoytoT7qWqP2VMuEP4Mkf6vsun8MK-WV6wW89JYQEglMAc&usqp=CAU", category:"pop-funko" }
-];
-
+  { id:9, name:"Pop Funko Doutor estranho", price:109.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfBH1XvhoDbMfdxJVlxmfsHp1gfr13ATrFmA&s", category:"Colecionáveis" },
+  { id:10, name:"Pop Funko Capitão America", price:109.99, img:"https://cdn.awsli.com.br/600x700/84/84034/produto/230462615/funko-pop--marvel-wwii-ultimates-captain-america-821-exclusivo-c-1--800-cv8eq0wscv.jpg", category:"Colecionáveis" },
+  { id:11, name:"Pop Funko Homem de Ferro", price:109.99, img:"https://m.media-amazon.com/images/I/81CnvOG8+YL.jpg", category:"Colecionáveis" },
+  { id:12, name:"Pop Funko Thanos", price:109.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4bo4VPvkjfuvbNMteMADnXgoytoT7qWqP2VMuEP4Mkf6vsun8MK-WV6wW89JYQEglMAc&usqp=CAU", category:"Colecionáveis" },
+  { id:12, name:"Camisa Marvel", price:69.99, img:"img/camisamarvel.jpg", category:"camisetas" },
+  { id:12, name:"Garrafa Térmica do Batman", price:89.99, img:"img/batman.webp", category:"acessorios" },
+  { id:12, name:"Boneco Batman", price:199.99, img:"img/bat.webp", category:"Colecionáveis" },
+  { id:12, name:"Caderno Avengers", price:29.99, img:"img/caderno.jpg", category:"Caderno" },
+  { id:12, name:"Caderno DC", price:29.99, img:"img/cadernodc.jpg", category:"Caderno" },
+  { id:12, name:"Garrafa Térmica Capitão América", price:99.99, img:"img/capamerica.webp", category:"acessorios" },
+  { id:12, name:"Caderno Harry Potter", price:29.99, img:"img/cardernoharry.jpg", category:"Caderno" },
+  { id:12, name:"Caderno Star War", price:29.99, img:"img/cardernostarwar.jpg", category:"Caderno" },
+  { id:12, name:"Coração Tony Stark", price:800.00, img:"img/coracao.webp", category:"acessorios" },
+  { id:12, name:"Camisa DC", price:69.99, img:"img/dc.jpg", category:"camisetas" },
+  { id:12, name:"Boneco God Of War", price:179.99, img:"img/deusdaguerra.jpg", category:"Colecionáveis" },
+  { id:12, name:"Garrafa Térmica Avengers", price:29.99, img:"img/garrafa.jpg", category:"Colecionáveis" },
+  { id:12, name:"Boneco Groot", price:499.99, img:"img/groot.webp", category:"Colecionáveis" },
+  { id:12, name:"Pop Funko Harry Potter", price:109.99, img:"img/herry.jpg", category:"Colecionáveis" },
+  { id:12, name:"Cabeça Homem de ferro", price:899.99, img:"img/homem.webp", category:"Colecionáveis" },
+  { id:12, name:"Camisa Lanterna Verde", price:79.99, img:"img/lanterna.jpg", category:"camiseta" },
+  { id:12, name:"Garrafa Térmica Loki", price:59.99, img:"img/loki.jpg", category:"acessorios" },
+  { id:12, name:"Camisa Marvel frete/verso", price:99.99, img:"img/marvel.jpg", category:"camiseta" },
+  { id:12, name:"Boneco Baby Yoda", price:129.99, img:"img/sla.jpg", category:"Colecionáveis" },
+  { id:12, name:"Boneco Darth Vader", price:109.99, img:"img/darth.jpg", category:"Colecionáveis" },
+  ];
 // ----- ELEMENTOS DO DOM -----
 const productsEl = document.getElementById('products');
 const cartBtn = document.getElementById('cartBtn');
