@@ -3,64 +3,104 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Loja Geek</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>NerdNexus</title>
+  <!-- CSS está na pasta css -->
+  <link rel="stylesheet" href="site.css" />
 </head>
 <body>
 
-  <header>
+  <!-- HEADER -->
+  <header class="header">
+    <!-- ESQUERDA: LOGO + NOME -->
     <div class="brand">
-      <div class="logo">LG</div>
-      <div>
-        <h1>Loja Geek</h1>
-        <div class="muted" style="font-size:13px">Roupas e acessórios geeks</div>
+      <div class="logo">
+        <img src="logo.jpg" alt="Logo NerdNexus">
+      </div>
+      <div class="brand-info">
+        <h1>NerdNexus</h1>
+        <div class="muted" style="font-size:13px;">Roupas e acessórios geeks</div>
       </div>
     </div>
 
+    <!-- CENTRO: MENU -->
+    <nav class="nav">
+      <ul class="menu">
+        <li><a href="site.html">HOME</a></li>
+        <li><a href="sobre.html">SOBRE</a></li>
+
+        <!-- Dropdown CATEGORIAS -->
+        <li class="dropdown">
+          <a href="#">CATEGORIAS</a>
+          <div class="dropdown-content">
+            <button class="category-btn" data-category="all">Todos</button>
+            <button class="category-btn" data-category="camisetas">Camisetas</button>
+            <button class="category-btn" data-category="canecas">Canecas</button>
+            <button class="category-btn" data-category="pop-funko">Pop Funko</button>
+            <button class="category-btn" data-category="moletons">Moletons</button>
+          </div>
+        </li>
+
+        <li><a href="#">CLIENTE</a></li>
+      </ul>
+    </nav>
+
+    <!-- DIREITA: LOGIN + CARRINHO -->
     <div class="header-actions">
-      <div id="welcome" class="muted" style="font-size:13px;margin-right:10px"></div>
-
-      <!-- LOGIN: link para login.html (mantém aparência de botão) -->
-      <a href="login.html" id="loginLink" class="btn btn-ghost" role="button">Login</a>
-
+      <a href="login.html" class="btn btn-ghost">Login</a>
       <button id="cartBtn" class="btn btn-ghost">
         Carrinho <span id="cartCount" class="cart-badge">0</span>
       </button>
     </div>
   </header>
 
+  <!-- MAIN -->
   <main>
+    <!-- SEÇÃO DE NOVIDADES -->
     <div class="intro">
       <div>
         <h2>Novidades</h2>
         <p class="muted">Escolha seu look geek favorito.</p>
       </div>
-      <div class="muted small">Tema roxo • Versão estática</div>
+      <div class="muted small">Com grandes poderes vem grandes responsabilidades <i>Tio Ben</i></div>
     </div>
 
     <section class="grid" id="products"></section>
   </main>
 
-  <!-- Drawer / Carrinho -->
+  <!-- DRAWER / CARRINHO -->
   <div id="drawerBackdrop" class="drawer-backdrop"></div>
   <aside id="drawer" class="drawer" aria-hidden="true">
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
       <div style="font-weight:800;font-size:18px;color:var(--purple-700)">Seu Carrinho</div>
       <button id="closeDrawer" class="btn">Fechar</button>
     </div>
     <div id="cartList"></div>
-
-    <div style="margin-top:14px;border-top:1px solid rgba(0,0,0,0.04);padding-top:12px">
-      <div style="display:flex;justify-content:space-between;align-items:center;font-weight:700">
+    <div style="margin-top:14px;border-top:1px solid rgba(0,0,0,0.04);padding-top:12px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;font-weight:700;">
         <div>Total</div>
         <div id="cartTotal">R$ 0.00</div>
       </div>
-      <button id="checkoutBtn" class="btn" style="margin-top:12px;width:100%;background:linear-gradient(90deg,var(--purple-600),var(--purple-500));color:white;border-radius:8px">Finalizar Compra</button>
+      <button id="checkoutBtn" class="btn" style="margin-top:12px;width:100%;
+        background:linear-gradient(90deg,var(--purple-600),var(--purple-500));
+        color:white;border-radius:8px">
+        Finalizar Compra
+      </button>
     </div>
   </aside>
 
-  <footer>© <span id="year"></span> Loja Geek — Todos os direitos reservados</footer>
+  <!-- FOOTER -->
+  <footer>
+    © <span id="year"></span> Loja Geek — Todos os direitos reservados
+  </footer>
 
-  <script src="app.js"></script>
+  <!-- SCRIPTS -->
+  <script src="sites.js"></script>
+  <script>
+    // Atualiza o ano automaticamente
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
+
+
