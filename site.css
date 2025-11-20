@@ -1,4 +1,3 @@
-
 :root{
   --purple-900:#2a0250;
   --purple-700:#6b21a8;
@@ -24,21 +23,80 @@ body{
   flex-direction:column;
 }
 
-/* Header */
-header{
+.menu {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* --- HEADER ALINHADO EM 3 COLUNAS --- */
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 14px 20px;
   background: linear-gradient(90deg,var(--purple-600), var(--purple-500));
-  color:white;
-  padding:14px 20px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+  color: white;
+  gap: 20px;
   box-shadow: 0 6px 18px rgba(124,58,237,0.25);
 }
+
 .brand{
   display:flex;
   gap:12px;
   align-items:center;
 }
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none; /* Oculto por padrão */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(255,255,255,0.95);
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  padding: 10px 0;
+  border-radius: 8px;
+  z-index: 100;
+}
+
+/* Mostrar dropdown ao passar o mouse ou ao clicar */
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+/* Botões de categoria dentro do dropdown */
+.dropdown-content .category-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+}
+
+.dropdown-content .category-btn:hover {
+  background: var(--purple-100, #f3e8ff);
+}
+
+
 .logo{
   width:44px;
   height:44px;
@@ -52,8 +110,24 @@ header{
   font-size:14px;
   box-shadow:0 6px 18px rgba(0,0,0,0.18);
 }
-.brand h1{margin:0;font-size:18px;letter-spacing:0.2px}
-.header-actions{display:flex;gap:10px;align-items:center}
+
+.brand h1{
+  margin:0;
+  font-size:18px;
+  letter-spacing:0.2px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
 
 button.btn {
   border:0;
@@ -62,7 +136,12 @@ button.btn {
   cursor:pointer;
   font-weight:600;
 }
-.btn-ghost{background:rgba(255,255,255,0.08); color:white}
+
+.btn-ghost{
+  background:rgba(255,255,255,0.08); 
+  color:white;
+}
+
 .cart-badge{
   display:inline-grid;
   place-items:center;
@@ -89,8 +168,7 @@ main{max-width:1100px;margin:28px auto;padding:0 18px;flex:1}
 @media(min-width:640px){ .grid{grid-template-columns:repeat(2,1fr)} }
 @media(min-width:980px){ .grid{grid-template-columns:repeat(4,1fr)} }
 
-/* ----- NOVO: FUNDO ROXO NOS CARDS + HOVER ----- */
-
+/* Cards */
 .card{
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.15);
@@ -102,7 +180,6 @@ main{max-width:1100px;margin:28px auto;padding:0 18px;flex:1}
   flex-direction:column;
   gap:8px;
   min-height:320px;
-
   transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
 }
 
@@ -112,7 +189,6 @@ main{max-width:1100px;margin:28px auto;padding:0 18px;flex:1}
   background: rgba(255,255,255,0.16);
 }
 
-/* Efeito na imagem do produto */
 .card img{
   width:100%;
   height:180px;
@@ -128,7 +204,6 @@ main{max-width:1100px;margin:28px auto;padding:0 18px;flex:1}
 
 .price{color:#f1e6ff;font-weight:800;font-size:18px}
 .card .meta{font-size:13px;color:var(--muted)}
-
 .card-footer{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:8px}
 
 /* Cart drawer */
@@ -162,6 +237,7 @@ main{max-width:1100px;margin:28px auto;padding:0 18px;flex:1}
 .modal-card{
   width:100%;max-width:420px;background:white;padding:18px;border-radius:12px;box-shadow:0 12px 40px rgba(2,6,23,0.2);
 }
+
 label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
 input[type="email"], input[type="password"]{
   width:100%;padding:10px;border-radius:8px;border:1px solid #e6e6ea;font-size:14px;margin-bottom:10px;
@@ -172,3 +248,65 @@ footer{padding:20px;text-align:center;color:var(--muted);font-size:13px}
 /* small helpers */
 .muted{color:var(--muted)}
 .center{display:flex;align-items:center;justify-content:center}
+
+/* ----------------- SEÇÃO SOBRE ----------------- */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.about-content {
+  flex: 1 1 400px;
+  color: #f5f3ff;
+}
+
+.about-content h2 {
+  font-size: 28px;
+  color: var(--purple-500);
+  margin-bottom: 16px;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.about-image {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center
+}
+html {
+  scroll-behavior: smooth;
+}
+ .about {
+  display: flex;           /* Faz o container em linha (horizontal) */
+  align-items: center;     /* Alinha verticalmente ao centro */
+  justify-content: space-between; /* Espaça entre texto e imagem */
+  gap: 60px;               /* Espaço entre as duas colunas */
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  flex-wrap: wrap;         /* Faz quebrar em tela pequena */
+}
+
+.about-content {
+  flex: 1 1 400px;         /* Ocupa espaço e é responsivo */
+}
+
+.about-image {
+  flex: 1 1 300px;         /* Ocupa espaço e é responsivo */
+}
+
+.about-image img {
+  width: 100%;             /* Preenche o container da imagem */
+  height: auto;
+  border-radius: 10px;
+}
