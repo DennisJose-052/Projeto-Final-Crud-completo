@@ -14,6 +14,16 @@ const imgEl = document.getElementById("img");
 const categoryEl = document.getElementById("category");
 
 // ========================
+// GERAR ID SEQUENCIAL
+// ========================
+function generateId() {
+  if (products.length === 0) return 1;
+
+  const lastId = Math.max(...products.map(p => p.id));
+  return lastId + 1;
+}
+
+// ========================
 // SALVAR NO LOCALSTORAGE
 // ========================
 function save() {
@@ -40,7 +50,7 @@ form.addEventListener("submit", e => {
   } else {
     // CRIAR
     const newProduct = {
-      id: Date.now(),
+      id: generateId(),
       name: nameEl.value,
       price: Number(priceEl.value),
       img: imgEl.value,
