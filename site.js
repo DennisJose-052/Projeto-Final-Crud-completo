@@ -1,38 +1,6 @@
-// ----- DADOS DOS PRODUTOS -----
-const PRODUCTS = [
-  { id:1, name:"Xícara Marvel", price:49.99, img:"https://www.toquedecorativo.com.br/wp-content/uploads/2022/04/babcb74b70.jpg", category:"canecas" },
-  { id:2, name:"Camisa Homem Aranha", price:69.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKkVOOSc13j2rTgORv6BulX6yVUElMKsiJaw&s", category:"camisetas" },
-  { id:3, name:"Moletom Marvel", price:249.49, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqNVl6UxIWruxTP277LAS4OaCpB8kvbePbUw&s", category:"moletons" },
-  { id:4, name:"Boné Vingadores", price:79.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5Ia11AHxHF1nvlzXjaPhcYl0C8ZlOxUv9hw&s", category:"acessorios" },
-  { id:5, name:"Jaqueta Goku", price:149.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuLzTLKV8ETxd9z0YUcIm0uKE3rnb3Ix7UDQ&s", category:"moletons" },
-  { id:6, name:"Meia Sonic (PAR)", price:69.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtrNEhpKBSABMLVrwhBq2uchKoPANeaomTcQ&s", category:"acessorios" },    
-  { id:7, name:"Mochila Vingadores", price:179.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDg-ilmbLCMBTawBc3p2Wb0IUDO56GAYsMUw&s", category:"acessorios" },
-  { id:8, name:"Camisa Matrix", price:69.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOzw6C01wsQHdHvxJlR948_EP-bOn9fwrtRg&s", category:"camisetas" },
-  { id:9, name:"Pop Funko Doutor estranho", price:109.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfBH1XvhoDbMfdxJVlxmfsHp1gfr13ATrFmA&s", category:"Colecionáveis" },
-  { id:10, name:"Pop Funko Capitão America", price:109.99, img:"https://cdn.awsli.com.br/600x700/84/84034/produto/230462615/funko-pop--marvel-wwii-ultimates-captain-america-821-exclusivo-c-1--800-cv8eq0wscv.jpg", category:"Colecionáveis" },
-  { id:11, name:"Pop Funko Homem de Ferro", price:109.99, img:"https://m.media-amazon.com/images/I/81CnvOG8+YL.jpg", category:"Colecionáveis" },
-  { id:12, name:"Pop Funko Thanos", price:109.99, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4bo4VPvkjfuvbNMteMADnXgoytoT7qWqP2VMuEP4Mkf6vsun8MK-WV6wW89JYQEglMAc&usqp=CAU", category:"Colecionáveis" },
-  { id:12, name:"Camisa Marvel", price:69.99, img:"img/camisamarvel.jpg", category:"camisetas" },
-  { id:12, name:"Garrafa Térmica do Batman", price:89.99, img:"img/batman.webp", category:"acessorios" },
-  { id:12, name:"Boneco Batman", price:199.99, img:"img/bat.webp", category:"Colecionáveis" },
-  { id:12, name:"Caderno Avengers", price:29.99, img:"img/caderno.jpg", category:"Caderno" },
-  { id:12, name:"Caderno DC", price:29.99, img:"img/cadernodc.jpg", category:"Caderno" },
-  { id:12, name:"Garrafa Térmica Capitão América", price:99.99, img:"img/capamerica.webp", category:"acessorios" },
-  { id:12, name:"Caderno Harry Potter", price:29.99, img:"img/cardernoharry.jpg", category:"Caderno" },
-  { id:12, name:"Caderno Star War", price:29.99, img:"img/cardernostarwar.jpg", category:"Caderno" },
-  { id:12, name:"Coração Tony Stark", price:800.00, img:"img/coracao.webp", category:"acessorios" },
-  { id:12, name:"Camisa DC", price:69.99, img:"img/dc.jpg", category:"camisetas" },
-  { id:12, name:"Boneco God Of War", price:179.99, img:"img/deusdaguerra.jpg", category:"Colecionáveis" },
-  { id:12, name:"Garrafa Térmica Avengers", price:29.99, img:"img/garrafa.jpg", category:"Colecionáveis" },
-  { id:12, name:"Boneco Groot", price:499.99, img:"img/groot.webp", category:"Colecionáveis" },
-  { id:12, name:"Pop Funko Harry Potter", price:109.99, img:"img/herry.jpg", category:"Colecionáveis" },
-  { id:12, name:"Cabeça Homem de ferro", price:899.99, img:"img/homem.webp", category:"Colecionáveis" },
-  { id:12, name:"Camisa Lanterna Verde", price:79.99, img:"img/lanterna.jpg", category:"camiseta" },
-  { id:12, name:"Garrafa Térmica Loki", price:59.99, img:"img/loki.jpg", category:"acessorios" },
-  { id:12, name:"Camisa Marvel frete/verso", price:99.99, img:"img/marvel.jpg", category:"camiseta" },
-  { id:12, name:"Boneco Baby Yoda", price:129.99, img:"img/sla.jpg", category:"Colecionáveis" },
-  { id:12, name:"Boneco Darth Vader", price:109.99, img:"img/darth.jpg", category:"Colecionáveis" },
-  ];
+// ----- CARREGAR PRODUTOS DO CRUD -----
+let PRODUCTS = JSON.parse(localStorage.getItem("lojaGeek_products") || "[]");
+
 // ----- ELEMENTOS DO DOM -----
 const productsEl = document.getElementById('products');
 const cartBtn = document.getElementById('cartBtn');
@@ -57,12 +25,26 @@ function saveCart() {
 
 // ----- RENDERIZAÇÃO DE PRODUTOS -----
 function renderProducts(list = PRODUCTS) {
+
+  // Se não houver produtos no CRUD:
+  if (list.length === 0) {
+    productsEl.innerHTML = `
+      <div style="padding:20px;font-size:18px;color:#555">
+        Nenhum produto encontrado.<br>
+        Vá até o <strong>Painel Admin</strong> e cadastre novos produtos.
+      </div>
+    `;
+    return;
+  }
+
   productsEl.innerHTML = '';
+
   list.forEach(p => {
     const card = document.createElement('div');
     card.className = 'card';
     card.innerHTML = `
       <img src="${p.img}" alt="${escapeHtml(p.name)}">
+
       <div style="margin-top:8px;display:flex;justify-content:space-between;align-items:center">
         <div>
           <div style="font-weight:700">${escapeHtml(p.name)}</div>
@@ -72,8 +54,13 @@ function renderProducts(list = PRODUCTS) {
           <div class="price">R$ ${p.price.toFixed(2)}</div>
         </div>
       </div>
+
       <div style="margin-top:8px;text-align:center">
-        <button class="btn" onclick="addToCart(${p.id})" style="background:linear-gradient(90deg,var(--purple-600),var(--purple-500));color:white;border-radius:8px">Adicionar ao carrinho</button>
+        <button class="btn"
+          onclick="addToCart(${p.id})"
+          style="background:linear-gradient(90deg,var(--purple-600),var(--purple-500));color:white;border-radius:8px">
+          Adicionar ao carrinho
+        </button>
       </div>
     `;
     productsEl.appendChild(card);
@@ -84,15 +71,21 @@ function renderProducts(list = PRODUCTS) {
 function addToCart(productId) {
   const prod = PRODUCTS.find(p => p.id === productId);
   if (!prod) return;
+
   const found = cart.find(i => i.id === productId);
   if (found) found.qty += 1;
   else cart.push({ ...prod, qty: 1 });
+
   saveCart();
   openDrawer();
 }
 
 function changeQty(productId, delta) {
-  cart = cart.map(i => i.id === productId ? { ...i, qty: Math.max(1, i.qty + delta) } : i);
+  cart = cart.map(i =>
+    i.id === productId
+      ? { ...i, qty: Math.max(1, i.qty + delta) }
+      : i
+  );
   saveCart();
 }
 
@@ -130,6 +123,7 @@ function renderCart() {
       </div>
     `).join('');
   }
+
   cartTotalEl.innerText = 'R$ ' + cartTotal().toFixed(2);
 }
 
@@ -139,17 +133,20 @@ function openDrawer() {
   drawerBackdrop.classList.add('show');
   drawer.setAttribute('aria-hidden', 'false');
 }
+
 function closeDrawerFn() {
   drawer.classList.remove('open');
   drawerBackdrop.classList.remove('show');
   drawer.setAttribute('aria-hidden', 'true');
 }
+
 cartBtn.addEventListener('click', openDrawer);
 closeDrawer.addEventListener('click', closeDrawerFn);
 drawerBackdrop.addEventListener('click', closeDrawerFn);
 
 checkoutBtn.addEventListener('click', () => {
   if (cart.length === 0) return alert('Seu carrinho está vazio.');
+
   if (confirm(`Confirmar compra no valor de R$ ${cartTotal().toFixed(2)} ?`)) {
     cart = [];
     saveCart();
@@ -169,11 +166,15 @@ document.querySelectorAll('.category-btn').forEach(btn => {
 
 // ----- ESCAPAR HTML -----
 function escapeHtml(s) {
-  return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' })[c]);
+  return String(s).replace(
+    /[&<>"']/g,
+    c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' })[c]
+  );
 }
 
 // ----- INICIALIZAÇÃO -----
 function init() {
+  PRODUCTS = JSON.parse(localStorage.getItem("lojaGeek_products") || "[]"); // atualiza ao iniciar
   renderProducts();
   renderCart();
   window.addToCart = addToCart;
