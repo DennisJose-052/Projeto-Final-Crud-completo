@@ -111,3 +111,19 @@ function render() {
 }
 
 render();
+
+  // ===== CONFIGURE SUA SENHA AQUI =====
+const senhaEstoque = "123456";  // <<< Altere para a senha desejada
+
+// ===== PROTEÇÃO DO BOTÃO ESTOQUE =====
+document.getElementById("estoqueBtn").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const senhaDigitada = prompt("Digite a senha para acessar o estoque:");
+
+  if (senhaDigitada === senhaEstoque) {
+    window.location.href = "admin.html"; // página protegida
+  } else if (senhaDigitada !== null) {
+    alert("Senha incorreta!");
+  }
+});
