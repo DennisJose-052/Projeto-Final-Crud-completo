@@ -1,4 +1,4 @@
-// ----- CARREGAR PRODUTOS DO CRUD -----
+// ----- CARREGAR PRODUTOS DO ESTOQUE -----
 let PRODUCTS = JSON.parse(localStorage.getItem("lojaGeek_products") || "[]");
 
 // ----- ELEMENTOS DO DOM -----
@@ -182,3 +182,22 @@ function init() {
   window.removeFromCart = removeFromCart;
 }
 init();
+
+  // Atualiza o ano automaticamente
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ===== CONFIGURE SUA SENHA AQUI =====
+const senhaEstoque = "12345";  // <<< Altere para a senha desejada
+
+// ===== PROTEÇÃO DO BOTÃO ESTOQUE =====
+document.getElementById("estoqueBtn").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const senhaDigitada = prompt("Digite a senha para acessar o estoque:");
+
+  if (senhaDigitada === senhaEstoque) {
+    window.location.href = "admin.html"; // página protegida
+  } else if (senhaDigitada !== null) {
+    alert("Senha incorreta!");
+  }
+});
