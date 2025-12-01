@@ -1,52 +1,130 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Painel Admin - CRUD Produtos</title>
-  <link rel="stylesheet" href="admin.css">
-</head>
-<body>
 
-<h1>Estoque de Produtos — NerdNexus</h1>
+// ========================
+// CARREGAR PRODUTOS
+// ========================
+let products = JSON.parse(localStorage.getItem("lojaGeek_products") || "[]");
 
-<!-- FORMULÁRIO -->
-<form id="productForm">
-  <input type="hidden" id="id">
+// Referências
+const form = document.getElementById("productForm");
+const table = document.getElementById("productTable");
 
-  <label>Nome:</label>
-  <input type="text" id="name" required>
+const id = document.getElementById("id");
+const nameEl = document.getElementById("name");
+const priceEl = document.getElementById("price");
+const imgEl = document.getElementById("img");
+const categoryEl = document.getElementById("category");
 
-  <label>Preço:</label>
-  <input type="number" id="price" step="0.01" required>
+// ========================
+// GERAR ID SEQUENCIAL
+// ========================
+function generateId() {
+  if (products.length === 0) return 1;
 
-  <label>URL da Imagem:</label>
-  <input type="text" id="img" required>
+  const lastId = Math.max(...products.map(p => p.id));
+  return lastId + 1;
+}
 
-  <label>Categoria:</label>
-  <input type="text" id="category" required>
+// ========================
+// SALVAR NO LOCALSTORAGE
+// ========================
+function save() {
+  localStorage.setItem("lojaGeek_products", JSON.stringify(products));
+  render();
+}
 
-  <button type="submit" id="saveBtn">Salvar Produto</button>
-</form>
+// ========================
+// ADICIONAR / EDITAR PRODUTO
+// ========================
+form.addEventListener("submit", e => {
+  e.preventDefault();
 
-<hr>
+  if (id.value) {
+    // EDITAR
+    const index = products.findIndex(p => p.id == id.value);
+    products[index] = {
+      id: Number(id.value),
+      name: nameEl.value,
+      price: Number(priceEl.value),
+      img: imgEl.value,
+      category: categoryEl.value
+    };
+  } else {
+    // CRIAR
+    const newProduct = {
+      id: generateId(),
+      name: nameEl.value,
+      price: Number(priceEl.value),
+      img: imgEl.value,
+      category: categoryEl.value
+    };
+    products.push(newProduct);
+  }
 
-<!-- LISTA DE PRODUTOS -->
-<h2>Lista de Produtos</h2>
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Nome</th>
-      <th>Preço</th>
-      <th>Categoria</th>
-      <th>Imagem</th>
-      <th>Ações</th>
-    </tr>
-  </thead>
-  <tbody id="productTable"></tbody>
-</table>
+  save();
+  form.reset();
+  id.value = "";
+});
 
-<script src="admin.js"></script>
-</body>
-</html>
+// ========================
+// CARREGAR PRODUTO PARA EDIÇÃO
+// ========================
+function editProduct(prod) {
+  id.value = prod.id;
+  nameEl.value = prod.name;
+  priceEl.value = prod.price;
+  imgEl.value = prod.img;
+  categoryEl.value = prod.category;
+}
+
+// ========================
+// REMOVER PRODUTO
+// ========================
+function deleteProduct(prodId) {
+  if (!confirm("Deseja realmente excluir este produto?")) return;
+
+  products = products.filter(p => p.id !== prodId);
+  save();
+}
+
+// ========================
+// RENDERIZAR TABELA
+// ========================
+function render() {
+  table.innerHTML = "";
+
+  products.forEach(p => {
+    const tr = document.createElement("tr");
+
+    tr.innerHTML = `
+      <td>${p.id}</td>
+      <td>${p.name}</td>
+      <td>R$ ${p.price.toFixed(2)}</td>
+      <td>${p.category}</td>
+      <td><img src="${p.img}" width="50"></td>
+      <td>
+        <button class="btn-edit" onclick='editProduct(${JSON.stringify(p)})'>Editar</button>
+        <button class="btn-delete" onclick="deleteProduct(${p.id})">Excluir</button>
+      </td>
+    `;
+
+    table.appendChild(tr);
+  });
+}
+
+render();
+
+  // ===== CONFIGURE SUA SENHA AQUI =====
+const senhaEstoque = "123456";  // <<< Altere para a senha desejada
+
+// ===== PROTEÇÃO DO BOTÃO ESTOQUE =====
+document.getElementById("estoqueBtn").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const senhaDigitada = prompt("Digite a senha para acessar o estoque:");
+
+  if (senhaDigitada === senhaEstoque) {
+    window.location.href = "admin.html"; // página protegida
+  } else if (senhaDigitada !== null) {
+    alert("Senha incorreta!");
+  }
+});
