@@ -29,6 +29,7 @@ input {
   border: 2px solid #ddd;
   border-radius: 8px;
   transition: 0.3s;
+  font-size: 16px;
 }
 
 input:focus {
@@ -51,6 +52,24 @@ button {
 
 button:hover {
   background: #8e44ad;
+}
+
+.password-box {
+  position: relative;
+  width: 100%;
+}
+
+.togglePassword {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.togglePassword svg {
+  width: 22px;
+  height: 22px;
 }
 
 .link {
